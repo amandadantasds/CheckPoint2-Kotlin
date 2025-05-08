@@ -60,7 +60,7 @@ interface MercadoBitcoinService {
 - ## 🏭 Instanciando o Serviço com Retrofit (`MercadoBitcoinServiceFactory`)
 
      A classe `MercadoBitcoinServiceFactory` é responsável por configurar o Retrofit e criar uma instância da interface `MercadoBitcoinService`.
-     <p> ℹ️ A interface Retrofit transforma a resposta JSON em um objeto.</p>
+     <p> ℹ️ <b>A interface Retrofit transforma a resposta JSON em um objeto.</b> </p>
      
 ```kotlin
 class MercadoBitcoinServiceFactory {
@@ -135,6 +135,7 @@ private fun makeRestCall() {
 - ## 🧱 Layout Principal (`activity_main.xml`)
   Para finalizar, a estrutura visual da tela principal é definida no arquivo `activity_main.xml`. Utilizamos o `LinearLayout` vertical para organizar e incluir dois componentes 
   essenciais da interface:
+  
      - Barra superior (Toolbar), incluída utilizando `component_toolbar_main.xml`;
      - Área de cotação, com título, valor e data/hora, definida em `component_quote_information.xml`.
 
