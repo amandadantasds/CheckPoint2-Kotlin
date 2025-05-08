@@ -46,4 +46,31 @@
           val date: Long
       )
 ```
+- ## 🔄 Requisição (`MercadoBitcoinService`)
+
+  A interface `MercadoBitcoinService` é responsável por realizar uma requisição <b>GET</b> para obter a cotação atual do <b>Bitcoin</b> a partir da API do Mercado Bitcoin.
+
+```kotlin
+interface MercadoBitcoinService {
+    @GET("api/BTC/ticker/")
+    suspend fun getTicker(): Response<TickerResponse>
+}
+```
+- ## 🏭 Instanciando o Serviço com Retrofit (`MercadoBitcoinServiceFactory`)
+
+     A classe `MercadoBitcoinServiceFactory` é responsável por configurar o Retrofit e criar uma instância da interface `MercadoBitcoinService`, que permite fazer chamadas HTTP à API.
+     <p> <b>OBS: </b>A interface Retrofit é responsável por transformar a resposta JSON em um objeto.</p>
+     
+```kotlin
+class MercadoBitcoinServiceFactory {
+    fun create(): MercadoBitcoinService {
+        val retrofit = Retrofit.Builder()
+            .baseUrl("https://www.mercadobitcoin.net/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+        return retrofit.create(MercadoBitcoinService::class.java)
+    }
+}
+
+
 
