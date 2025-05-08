@@ -17,8 +17,33 @@
   <b>Amanda Dantas de Souza- RM552352</b>
 </p>
 
-## 📱 Aplicação:
+# 📱 Aplicação:
 <div align="center"> 
 <img src= "https://github.com/user-attachments/assets/6c0df9b3-dc4e-4898-86a6-63531579ab30" width="250"/>
 <img src= "https://github.com/user-attachments/assets/2e69db84-66d0-4bc2-92f7-f9caa3af9055" width="250"/>
 </div>
+
+# 🛠️ Funcionamento 
+<p>Para buscar a cotação mais recente de criptomoedas, utilizamos a <b>API do Mercado Bitcoin</b>:</p> 
+<p>🔗 [https://www.mercadobitcoin.com.br/]</p>
+<p>Vamos entender melhor a aplicação da API destrinchando os códigos!</p>
+
+- ## 📩 Estrutura da Resposta (`TickerResponse`)
+     Quando o usuário clica no botão <b>“Atualizar”</b>, a aplicação realiza uma requisição do tipo <b>GET</b> para a API.
+     O retorno esperado é um objeto <b>JSON</b>, que segue a estrutura abaixo:
+ ```kotlin
+      class TickerResponse(
+          val ticker: Ticker
+      )
+      
+      class Ticker(
+          val high: String,
+          val low: String,
+          val vol: String,
+          val last: String,
+          val buy: String,
+          val sell: String,
+          val date: Long
+      )
+```
+
