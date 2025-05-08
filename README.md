@@ -136,7 +136,7 @@ private fun makeRestCall() {
   Para finalizar, a estrutura visual da tela principal é definida no arquivo `activity_main.xml`. Utilizamos o `LinearLayout` vertical para organizar e incluir dois componentes 
   essenciais da interface:
      - Barra superior (Toolbar), incluída utilizando `component_toolbar_main.xml`;
-     - Area de cotação, com título, valor e data/hora, definida em `component_quote_information.xml`.
+     - Área de cotação, com título, valor e data/hora, definida em `component_quote_information.xml`.
 
 ```xml
 <!-- res/layout/activity_main.xml -->
