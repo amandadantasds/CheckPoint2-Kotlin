@@ -18,3 +18,7 @@
 </p>
 
 ## 📱 Aplicação:
+<div align="center"> 
+<img src= "https://github.com/user-attachments/assets/6c0df9b3-dc4e-4898-86a6-63531579ab30" width="250"/>
+<img src= "https://github.com/user-attachments/assets/2e69db84-66d0-4bc2-92f7-f9caa3af9055" width="250"/>
+</div>
